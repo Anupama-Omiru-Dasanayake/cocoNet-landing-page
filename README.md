@@ -1,40 +1,59 @@
-# cocoNet Guided Landing Page Template
+# 🌴 CocoNet – Landing Page
 
-A responsive HTML/CSS/JavaScript starter with the shared navigation, dark mode, and footer. The main content area contains commented section examples so the team knows exactly where to add work.
+The official landing page for **CocoNet**, an AI-powered coconut disease detection and management platform designed to support Sri Lankan coconut farmers.
 
-## Files
-- `index.html` — navigation, commented section insertion points, footer.
-- `style.css` — global color tokens, typography, responsive rules, shared section helpers, footer.
-- `script.js` — mobile navigation, light/dark theme, current copyright year.
-- `TEAM-GUIDE.md` — collaboration rules and section ownership checklist.
+##  About the Project
 
-## Run it
-Open `index.html` in a browser, or open the folder in VS Code and run it with Live Server. No framework or build step is required.
+CocoNet aims to help coconut farmers identify diseases and other problems affecting coconut trees through image-based detection and provide accessible information to support better agricultural decision-making.
 
-## Add a section
-1. Open `index.html`.
-2. Find the matching `SECTION START` comment inside `<main id="main-content">`.
-3. Uncomment the example `<section>` block (remove the opening `<!--` and closing `-->` around that example only).
-4. Replace the example text with your real content.
-5. Keep the section `id` exactly the same as its navigation link.
-6. Add section-specific CSS at the bottom of `style.css` under `TEAM SECTION STYLES`.
+This repository contains the frontend landing page that introduces the project, its objectives, and its planned features.
 
-Example:
-```html
-<section id="overview" class="content-section">
-  <div class="section-container">
-    <p class="section-eyebrow">ABOUT COCONET</p>
-    <h1>Project overview</h1>
-    <p>Introduce the problem and intended users.</p>
-  </div>
-</section>
+##  Project Objectives
+
+- Help farmers identify coconut diseases and other agricultural problems.
+- Introduce AI-powered detection for coconut stems, leaves, and nuts.
+- Provide accessible information and guidance for coconut cultivation.
+- Promote technology-driven solutions for improving coconut farming in Sri Lanka.
+
+##  Technologies Used
+
+Update this list to match the technologies used in the repository.
+
+- HTML5
+- CSS3
+- JavaScript
+- Git and GitHub
+
+
+##  Project Structure
+
+```text
+cocoNet-landing-page/
+├── index.html
+├── style.css
+├── script.js
+├── images/
+└── README.md
 ```
 
-## Important
-- Do not add a second `<html>`, `<head>`, `<body>`, header, or footer when contributing a section.
-- Team members should contribute only their `<section>...</section>` markup and any uniquely named CSS classes.
-- Keep all section IDs unique.
-- Every `href="#something"` should point to a real element with `id="something"` or be replaced with a real URL.
-- Replace placeholder footer links before submission.
-- Avoid fixed widths such as `width: 1200px`; use responsive max-widths and grid/flex.
-- Test the page at 320px, 360px, 390px, 768px, 1024px, and 1440px.
+*Adjust the structure above to reflect the actual files in your repository.*
+
+## 👥 Project Team & Contributions
+
+| Team Member | IIT ID | Email | Sections Developed |
+|---|---|---|---|
+| Anupama Omiru (Team Lead) | 20241811 | anupama.20241811@iit.ac.lk | Global Template, Overview Section, FAQ Section |
+| Isindu Liyanage | 20241807 | isindu.20241807@iit.ac.lk | Team Section, Early Access Section |
+| Janith Thilanka | 20241900 | janith.20241900@iit.ac.lk | How It Works Section |
+| Sudil Hesara | 20241836 | sudil.20241836@iit.ac.lk | Farmer Stories Section |
+| Janani Abeysingha | 20241893 | janani.20241893@iit.ac.lk | Disease Detection Section |
+
+
+
+## 📄 License
+
+This project is developed for academic purposes as part of the SDGP module at the IIT affiliated with University of Westminster.
+
+---
+
+**CocoNet** – Empowering coconut farmers through technology.
