@@ -188,7 +188,19 @@
 
 
 
-
 // Janani Script
-
+// The reference design is an illustration, not a connected field-deployment tool.
+(() => {
+  "use strict";
+  const section = document.getElementById("disease-detection");
+  if (!section) return;
+  const deployButton = section.querySelector(".jdd-deploy");
+  const message = section.querySelector("#jdd-demo-message");
+  if (deployButton && message) {
+    deployButton.addEventListener("click", () => {
+      message.hidden = false;
+      message.textContent = "This is a visual demo only. No image is analysed, and no model, live telemetry, or deployment service is connected.";
+    });
+  }
+})();
 // End Janani Script
