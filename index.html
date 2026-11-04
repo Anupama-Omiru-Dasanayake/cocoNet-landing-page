@@ -491,21 +491,133 @@
 
 
 
-    <!-- SECTION START: DISEASE DETECTION feature explanation   -- Janani
-         Add the feature explanation, scan/upload flow, supported conditions, or demo here.
-         Only make claims that your project can support and demonstrate. -->
 
-    <section id="disease-detection" class="content-section">
-      <div class="section-container">
-        <p class="section-eyebrow">DISEASE DETECTION</p>
-        <h2>Describe the detection feature</h2>
-        <p>Explain the intended workflow and current prototype capabilities.</p>
+    <!-- SECTION START: DISEASE DETECTION feature explanation   -- Janani
+         Janani's component only. The visual is a non-functional illustration; no model is connected.
+         All other members' page sections remain unchanged. -->
+    <section id="disease-detection" class="content-section janani-dd" aria-labelledby="jdd-title">
+      <div class="section-container jdd-container">
+
+        <!-- Section heading -->
+        <div class="jdd-heading">
+          <span class="jdd-eyebrow">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-5 4-7 8-7 12a7 7 0 0 0 14 0c0-4-2-8-7-12Z"/><path d="M12 8v12M8 14l4 3 4-3"/></svg>
+            COMPUTER VISION &amp; DISEASE DETECTION PIPELINE
+          </span>
+          <h2 id="jdd-title">How CocoGuard Detects Disease &amp; Pests: Under<br class="jdd-title-break"> the Hood</h2>
+          <p class="jdd-subtitle">An illustrative look at the planned workflow: capture a coconut leaf image, assess visible symptoms, and present preliminary predictions with confidence-aware guidance.</p>
+        </div>
+
+        <!-- Four-stage visual pipeline -->
+        <div class="jdd-stages" aria-label="Proposed computer-vision processing pipeline">
+          <article class="jdd-stage">
+            <div class="jdd-stage-top">
+              <span class="jdd-number">01</span>
+              <span class="jdd-tag"><span aria-hidden="true">☼</span> Image Capture</span>
+            </div>
+            <h3>Photo Quality &amp; Preparation</h3>
+            <p>The farmer takes or uploads a coconut leaf photograph. The proposed workflow checks clarity and lighting before preparing the image for analysis.</p>
+            <div class="jdd-stage-stats">
+              <div><span>Photo Source</span><strong>Camera / Gallery</strong></div>
+              <div><span>Image Quality</span><strong>Review Required</strong></div>
+            </div>
+          </article>
+
+          <article class="jdd-stage">
+            <div class="jdd-stage-top">
+              <span class="jdd-number">02</span>
+              <span class="jdd-tag"><span aria-hidden="true">⌁</span> AI Processing</span>
+            </div>
+            <h3>Machine Learning Analysis</h3>
+            <p>The project aims to use trained image-classification models to learn visual patterns associated with supported coconut diseases and pests.</p>
+            <div class="jdd-stage-stats">
+              <div><span>Model Status</span><strong>In Development</strong></div>
+              <div><span>Evaluation</span><strong>To Be Tested</strong></div>
+            </div>
+          </article>
+
+          <article class="jdd-stage">
+            <div class="jdd-stage-top">
+              <span class="jdd-number">03</span>
+              <span class="jdd-tag"><span aria-hidden="true">◬</span> Visible Signs</span>
+            </div>
+            <h3>Symptom &amp; Damage Review</h3>
+            <p>Where model capability supports it, the interface can highlight affected leaf areas such as discoloration, lesions, or visible feeding damage.</p>
+            <div class="jdd-stage-stats">
+              <div><span>Region Detection</span><strong>Planned Feature</strong></div>
+              <div><span>Assessment Type</span><strong>Visual Indicators</strong></div>
+            </div>
+          </article>
+
+          <article class="jdd-stage">
+            <div class="jdd-stage-top">
+              <span class="jdd-number">04</span>
+              <span class="jdd-tag"><span aria-hidden="true">◎</span> Output Review</span>
+            </div>
+            <h3>Prediction &amp; Confidence</h3>
+            <p>The planned result will show a possible condition and confidence score for classes supported by validated data, or explain when the result is inconclusive.</p>
+            <div class="jdd-stage-stats">
+              <div><span>Supported Classes</span><strong>Dataset Dependent</strong></div>
+              <div><span>Model Accuracy</span><strong>Awaiting Tests</strong></div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Bottom integrated visualisation and feature metrics -->
+        <div class="jdd-architecture">
+          <div class="jdd-demo-column">
+            <div class="jdd-visual-topline">
+              <span class="jdd-live-caption"><span class="jdd-live-dot"></span> ILLUSTRATIVE SCAN PREVIEW</span>
+              <span class="jdd-system-caption">NON-LIVE DEMO</span>
+            </div>
+            <div class="jdd-visual-frame">
+              <span class="jdd-image-watermark">DESIGN MOCKUP</span>
+              <img src="images/janani-telemetry-demo.jpg" alt="Illustrative CocoGuard scan of a coconut leaf with lesion boundaries and diagnosis telemetry" loading="lazy" width="927" height="693">
+            </div>
+          </div>
+
+          <div class="jdd-architecture-info">
+            <h3>Integrated Crop Health Workflow</h3>
+            <p class="jdd-architecture-copy">CocoGuard is being designed to support preliminary coconut disease and pest awareness through smartphone images. Its predictions must be evaluated before use in real farming decisions.</p>
+
+            <div class="jdd-feature-grid">
+              <article class="jdd-feature">
+                <div class="jdd-feature-label"><span aria-hidden="true">▧</span> PHOTO REVIEW</div>
+                <strong>Image Quality</strong>
+                <p>Flag unclear or poorly lit photographs and request a better image when necessary.</p>
+              </article>
+              <article class="jdd-feature">
+                <div class="jdd-feature-label"><span aria-hidden="true">◈</span> AI ANALYSIS</div>
+                <strong>Confidence Score</strong>
+                <p>Present an estimated class confidence when a trained and tested model is available.</p>
+              </article>
+              <article class="jdd-feature">
+                <div class="jdd-feature-label"><span aria-hidden="true">☼</span> FARMER SUPPORT</div>
+                <strong>Clear Results</strong>
+                <p>Provide understandable descriptions of visible symptoms and prediction limitations.</p>
+              </article>
+              <article class="jdd-feature">
+                <div class="jdd-feature-label"><span aria-hidden="true">▤</span> RESEARCH GUIDANCE</div>
+                <strong>Expert Guidance</strong>
+                <p>Offer general management information from reliable sources, with expert confirmation for treatment.</p>
+              </article>
+            </div>
+
+            <div class="jdd-architecture-bottom">
+              <span class="jdd-shield" aria-hidden="true">♧</span>
+              <div class="jdd-verified">
+                <strong>Research Prototype</strong>
+                <span>Validation and agricultural review are pending</span>
+              </div>
+              <button type="button" class="jdd-deploy" aria-controls="jdd-demo-message">About This Demo</button>
+            </div>
+            <p class="jdd-demo-message" id="jdd-demo-message" role="status" aria-live="polite" hidden></p>
+          </div>
+        </div>
+        <p class="jdd-disclaimer">Visual design prototype only. Numbers and diagnoses printed inside the example image are fictional interface content, not measured model performance. For diagnosis or treatment, consult a qualified agricultural professional.</p>
       </div>
     </section>
-
     <!-- SECTION END: DISEASE DETECTION -->
-
-
 
 
 
