@@ -219,7 +219,20 @@ document.querySelectorAll(".coconet-faq .faq-card").forEach((card) => {
 
 
 // Isindu Script 
+// Isindu Script 
+// Draw the icons and keep the demo form on this page.
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
 
+      document.getElementById("pilot-registration-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("Thank you! You have been successfully added to the cocoNet launch waitlist and beta pilot program. Check your inbox or WhatsApp shortly.");
+      });
+    });
+
+// End Isindu Script 
 // End Isindu Script 
 
 
