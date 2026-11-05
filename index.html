@@ -506,7 +506,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-5 4-7 8-7 12a7 7 0 0 0 14 0c0-4-2-8-7-12Z"/><path d="M12 8v12M8 14l4 3 4-3"/></svg>
             COMPUTER VISION &amp; DISEASE DETECTION PIPELINE
           </span>
-          <h2 id="jdd-title">How CocoGuard Detects Disease &amp; Pests: Under<br class="jdd-title-break"> the Hood</h2>
+          <h2 id="jdd-title">How cocoNet Detects Diseases &amp; Pests <br class="jdd-title-break">  Under the Hood</h2>
           <p class="jdd-subtitle">An illustrative look at the planned workflow: capture a coconut leaf image, assess visible symptoms, and present preliminary predictions with confidence-aware guidance.</p>
         </div>
 
@@ -572,9 +572,49 @@
               <span class="jdd-live-caption"><span class="jdd-live-dot"></span> ILLUSTRATIVE SCAN PREVIEW</span>
               <span class="jdd-system-caption">NON-LIVE DEMO</span>
             </div>
+            
             <div class="jdd-visual-frame">
-              <span class="jdd-image-watermark">DESIGN MOCKUP</span>
-              <img src="images/janani-telemetry-demo.jpg" alt="Illustrative CocoGuard scan of a coconut leaf with lesion boundaries and diagnosis telemetry" loading="lazy" width="927" height="693">
+              <!-- Your original leaf image -->
+              <img
+                class="jdd-leaf-image"
+                src="images/coconut-disease-leaf.jpg"
+                alt="Coconut leaf being scanned for disease"
+              >
+
+              <!-- Top telemetry -->
+              <div class="jdd-telemetry jdd-gpu">
+                <span class="jdd-status-dot"></span>
+                GPU ACCEL: ACTIVE
+              </div>
+
+              <div class="jdd-telemetry jdd-gps">
+                GPS: 8.1832° N,  79.9432° E
+              </div>
+
+              <!-- Detection rectangle -->
+              <div class="jdd-detection-box">
+                <div class="jdd-detection-header">
+                  <span>ROI #04 [NECROSIS]</span>
+                  <span>CONF: 92.4%</span>
+                </div>
+                <div class="jdd-detection-footer">
+                  <span>1.4ms spot halo</span>
+                  <span>CCD: 0.93</span>
+                </div>
+              </div>
+
+              <!-- Bottom result -->
+              <div class="jdd-detection-result">
+                <span class="jdd-disease-name">
+                  <span class="jdd-result-icon">▧</span>
+                  Pestalotiopsis palmarum
+                </span>
+                <span class="jdd-disease-type">Canopy Necrosis</span>
+                <span class="jdd-confidence">42.4%</span>
+                <div class="jdd-confidence-bar">
+                  <span></span>
+                </div>
+              </div>
             </div>
           </div>
 
