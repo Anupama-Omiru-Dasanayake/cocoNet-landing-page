@@ -4393,7 +4393,7 @@ a:focus-visible {
 #disease-detection.janani-dd {
   --jdd-ink: #182239;
   --jdd-body: #5d6670;
-  --jdd-bg: #f0f1ff;
+  --jdd-bg: #ffffff;
   --jdd-paper: #fff;
   --jdd-quiet: #f0f1fe;
   --jdd-mint: #c9f9e4;
@@ -4528,7 +4528,7 @@ a:focus-visible {
 }
 /* The surrounding team's header/footer and all other sections remain theme-aware. */
 :root[data-theme="dark"] #disease-detection.janani-dd {
-  --jdd-bg: #151927; --jdd-paper: #1e2931; --jdd-quiet: #293447;
+  --jdd-bg: #0d1511; --jdd-paper: #13221b; --jdd-quiet: #13221b;
   --jdd-ink: #f0f5f5; --jdd-body: #bfccd1;
   --jdd-hairline: #39494f; --jdd-green: #86eac0;
   --jdd-mint: #183d30;
@@ -4539,7 +4539,7 @@ a:focus-visible {
 :root[data-theme="dark"] #disease-detection .jdd-feature { border-color: #36465a; }
 :root[data-theme="dark"] #disease-detection .jdd-feature-label,
 :root[data-theme="dark"] #disease-detection .jdd-live-caption { color: #77dfab; }
-:root[data-theme="dark"] #disease-detection .jdd-architecture-bottom { background: #303b4b; }
+:root[data-theme="dark"] #disease-detection .jdd-architecture-bottom { background: #13221b; }
 :root[data-theme="dark"] #disease-detection .jdd-verified strong { color: #e2eafd; }
 :root[data-theme="dark"] #disease-detection .jdd-tag { background: #214c36; color: #b6efcd; }
 :root[data-theme="dark"] #disease-detection .jdd-disclaimer { color: #b6c0c8; }
@@ -4596,4 +4596,155 @@ a:focus-visible {
   background: rgba(255,255,255,.95); color: #004b34;
   border: 1px solid rgba(0,75,52,.25); border-radius: 5px; padding: 5px 7px;
 }
+
+/* JANANI ONLY: Disease Detection preview image */
+#disease-detection .jdd-visual-frame {
+  aspect-ratio: 309 / 231;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #526c37;
+}
+
+#disease-detection .jdd-visual-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+/* JANANI ONLY: show the complete Disease Detection preview */
+#disease-detection .jdd-visual-frame img {
+  object-fit: cover;
+}
+
+
+/* JANANI ONLY: independently layered scan interface */
+#disease-detection .jdd-visual-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 309 / 231;
+  border-radius: 10px;
+  background: #263d24;
+  color: #eaffdc;
+  font-family: "DM Sans", sans-serif;
+}
+
+#disease-detection .jdd-leaf-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* GPU and GPS telemetry */
+#disease-detection .jdd-telemetry {
+  position: absolute;
+  z-index: 2;
+  top: 3%;
+  padding: 4px 6px;
+  background: rgba(12, 25, 19, 0.82);
+  border: 1px solid rgba(180, 255, 160, 0.35);
+  border-radius: 3px;
+  font: 600 clamp(5px, 0.65vw, 8px)/1.2 monospace;
+  letter-spacing: 0.04em;
+}
+
+#disease-detection .jdd-gpu {
+  left: 3%;
+}
+
+#disease-detection .jdd-gps {
+  right: 3%;
+}
+
+#disease-detection .jdd-status-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 3px;
+  border-radius: 50%;
+  background: #72ff9b;
+}
+
+/* Detection box */
+#disease-detection .jdd-detection-box {
+  position: absolute;
+  z-index: 2;
+  left: 26%;
+  top: 25%;
+  width: 38%;
+  height: 38%;
+  border: 1px dashed #72ffb4;
+  box-shadow: 0 0 8px rgba(80, 255, 160, 0.2);
+}
+
+#disease-detection .jdd-detection-header,
+#disease-detection .jdd-detection-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+  padding: 3px;
+  background: rgba(9, 25, 18, 0.82);
+  font: 600 clamp(4px, 0.55vw, 7px)/1.2 monospace;
+}
+
+#disease-detection .jdd-detection-header {
+  top: 0;
+  transform: translateY(-100%);
+}
+
+#disease-detection .jdd-detection-footer {
+  bottom: 0;
+  transform: translateY(100%);
+}
+
+/* Disease result strip */
+#disease-detection .jdd-detection-result {
+  position: absolute;
+  z-index: 3;
+  left: 3%;
+  right: 3%;
+  bottom: 3%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 6px;
+  background: rgba(9, 25, 18, 0.9);
+  border: 1px solid rgba(180, 255, 160, 0.3);
+  border-radius: 4px;
+  font: 600 clamp(5px, 0.65vw, 8px)/1.2 monospace;
+}
+
+#disease-detection .jdd-disease-name {
+  color: #75ffb2;
+  flex: 1 1 55%;
+}
+
+#disease-detection .jdd-disease-type {
+  color: #c9e9b4;
+}
+
+#disease-detection .jdd-confidence {
+  color: #75ffb2;
+}
+
+#disease-detection .jdd-confidence-bar {
+  flex: 0 0 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#disease-detection .jdd-confidence-bar span {
+  display: block;
+  width: 42.4%;
+  height: 100%;
+  background: #75ffb2;
+}
+
+
 /* End Janani Styles */
