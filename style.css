@@ -3312,6 +3312,164 @@ a:focus-visible {
   color: var(--muted);
 }
 
+
+/* Isindu: Team and Early Access layout fixes */
+#team,
+#early-access {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(48px, 7vw, 96px) 0;
+  overflow: clip;
+}
+
+#team .team-heading,
+#early-access .pilot-heading,
+#team .team-grid,
+#early-access .early-access-grid {
+  width: min(var(--container), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+#team .team-heading,
+#early-access .pilot-heading {
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+#team .team-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(16px, 1.6vw, 20px);
+}
+
+#team .team-card {
+  min-width: 0;
+}
+
+#early-access .early-access-grid {
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(20px, 2.6vw, 32px);
+}
+
+#early-access .slots-banner {
+  flex-wrap: wrap;
+}
+
+#early-access .progress-track {
+  max-width: 192px;
+  flex: 0 1 192px;
+}
+
+/* Ensure Lucide icons display consistently */
+#team [data-lucide],
+#early-access [data-lucide] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  vertical-align: middle;
+  stroke-width: 2;
+}
+
+#team .icon-button svg,
+#early-access .perk-icon svg,
+#early-access .hourglass-box svg,
+#early-access .select-arrow svg,
+#early-access .submit-button svg,
+#early-access .trust-item svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 1279px) {
+  #team .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  #team .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #early-access .early-access-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  #team,
+  #early-access {
+    padding: 56px 0;
+  }
+
+  #team .team-heading,
+  #early-access .pilot-heading,
+  #team .team-grid,
+  #early-access .early-access-grid {
+    width: calc(100% - 36px);
+  }
+
+  #team .team-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  #team .team-heading,
+  #early-access .pilot-heading {
+    margin-bottom: 36px;
+  }
+
+  #early-access .slots-banner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #early-access .progress-track {
+    width: 100%;
+    max-width: none;
+    flex-basis: auto;
+  }
+}
+
+/* Dark-mode icon backgrounds and colors */
+:root[data-theme="dark"] #team .icon-button,
+:root[data-theme="dark"] #team .round-button,
+:root[data-theme="dark"] #early-access .perk-icon,
+:root[data-theme="dark"] #early-access .hourglass-box {
+  background: var(--surface-strong);
+  color: var(--green-800);
+  border-color: var(--border);
+}
+
+:root[data-theme="dark"] #team .icon-button:hover,
+:root[data-theme="dark"] #team .round-button:hover {
+  background: #263a2e;
+  color: var(--green-900);
+}
+
+:root[data-theme="dark"] #early-access .pilot-badge,
+:root[data-theme="dark"] #early-access .launch-badge,
+:root[data-theme="dark"] #early-access .free-access-badge,
+:root[data-theme="dark"] #team .contributor-badge {
+  background: var(--green-100);
+  color: var(--green-900);
+}
+
+:root[data-theme="dark"] #early-access .problem-label {
+  color: var(--text);
+}
+
+:root[data-theme="dark"] #early-access .solution-label {
+  color: var(--green-800);
+}
+
+:root[data-theme="dark"] #early-access .perk-card:hover {
+  border-color: var(--green-800);
+}
+
 /* End Isindu Styles */
 
 /* End Isindu Styles */
